@@ -1,5 +1,11 @@
+.container{
+  width: 80%;
+  margin:0 auto;
+}
+
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -14,14 +20,60 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .navBar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu .navBarMenu{
+  display: flex;
+}
+
+.menu nav li{
+  font-size:18px;
+  list-style: none;
+  margin: 0 15px;
+}
+
+.menu nav li a{
+  text-decoration:none;
+  color:white;
+}
+
+.menu nav li a:hover{
+  text-decoration:underline;
+}
+
+.shopping{
+  display: flex;
+  align-items: flex-start;
+}
+
+.shopping img{
+  width: 30px;
+}
+
+.shopping .quantity{
+  background-color:brown;
+  border-radius: 50%;
+  padding: 1px 5px 2px;
+  font-size: 12px;
+  margin-left: -10px;
 }
 
 .App-link {
