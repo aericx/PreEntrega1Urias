@@ -1,20 +1,22 @@
 import MenuCart from "../MenuCart/MenuCart";
+import { NavLink, Link } from "react-router-dom";
 
-const navBar = () => {
+const NavBar = () => {
     return(
-        <div className="menu">
-            <h3>La Barra del Chef</h3>
-            <div class="navBar">
-                <nav className="navBarMenu">
-                    <li><a href="#">Barra de Autor</a></li>
-                    <li><a href="#">Barra Creativa</a></li>
-                    <li><a href="#">Barra Fría</a></li>
-                    <li><a href="#">Barra de Postres</a></li>
-                </nav>
+        <nav className="menu">
+            <Link to="/">
+                <h3>La Barra del Chef</h3>
+            </Link>
+            <div className="NavBar">
+                <div className="navBarMenu">
+                    <NavLink to={`/category/pasteles`} className={({isActive}) => isActive ? 'ActiveOption':'Option'}>Pasteles</NavLink>
+                    <NavLink to={`/category/panabox`} className={({isActive}) => isActive ? 'ActiveOption':'Option'}>Panabox</NavLink>
+                    <NavLink to={`/category/comidas`} className={({isActive}) => isActive ? 'ActiveOption':'Option'}>Comidas</NavLink>
+                </div>
                 <MenuCart/>
             </div>
-        </div>
-    );
+        </nav>
+    )
 }
 
-export default navBar
+export default NavBar
